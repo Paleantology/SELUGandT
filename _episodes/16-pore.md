@@ -170,14 +170,21 @@ which is a tabular format that can be read by most Office suites, R, Python, etc
 
 Embed the PDFs you downloaded below. Write a brief sentence about what the plot means and why it might have failed (or how we can improve). Add, commit and push this file, with your changes, to your copy of this repository by the start of class Tuesday.
 
-![Embed your histogram](../fig/histogram) 
+[\SELUGandT\homework\figs\hist.pdf]
 
-![Embed your quality ](../fig/qulity) 
+The data shows that most reads show less than 15 kbp, the fragment size could be increased by altering the fragmentation proccess.
 
-![Embed your basepairs ](../fig/bp) 
+[\SELUGandT\homework\figs\quality.pdf]
 
-![Embed your read length chart ](../fig/reads) 
+The quality graph shows the quality data for the differernt bp length segments, the data shows low quality scores for most reads. Improvements could be made by better adjusting the procedure and using a different extraction kit.
 
+[\SELUGandT\homework\figs\bp.pdf]
+
+The base pairs graph shows the progression of the data collection as time progressess the bp count increases. No improvements can be made.
+
+[\SELUGandT\homework\figs\reads.pdf] 
+
+The reads graph shows the progression of reads over time, concurrently it shows the increase in reads over time. No improvements can be made.
 
 
 
