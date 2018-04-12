@@ -6,7 +6,7 @@ questions:
  - Setting up data and config files for use with Masurca
 ---
 
-##Masurca
+## Masurca
 
 First, begin an interactive session. Then, move into your owrk directory.
 
