@@ -69,7 +69,7 @@ The pileups are also used to find small indels. For instance, if the input genom
 Create another script file by copying either the bwa\_map script or sam\_command script. Rename the run and the output. Delete the actual commands. Replace them with:
 
 ```
-  java -jar /work/yourUseName/pilon-1.21.jar --genome data/assembled/Illumina_assembly.fasta --outdir data/  --changes --tracks --diploid --frags data/mega.sorted.bam > illumina-pilon.log
+  java -jar /work/yourUseName/pilon-1.21.jar --threads 20 --genome data/assembled/Illumina_assembly.fasta --outdir data/  --changes --tracks --diploid --frags data/mega.sorted.bam > illumina-pilon.log
 ```
 
 ### Homework 
@@ -77,6 +77,8 @@ Create another script file by copying either the bwa\_map script or sam\_command
 [Pilon options](https://github.com/broadinstitute/pilon/wiki/Requirements-&-Usage) are here.
 
 Choose one other factor that you think might affect the assembly. Use pilon to make improvements to that issue. For example, you might consider eliminating low quality bases. Alternatively, you might choose to eliminate something from the fix list.
+
+Make either a separate script, or add you pilon command to the qsub we started in class. Push to your copy of the course website, or email to me.
 
 ## References
 
