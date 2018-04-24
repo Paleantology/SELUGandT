@@ -14,10 +14,11 @@ The compressed binary version of SAM is called a BAM file. We use this version t
 
 The file begins with a header, which is optional. The header is used to describe source of data, reference sequence, method of alignment, etc., this will change depending on the aligner being used. Following the header is the alignment section. Each line that follows corresponds to alignment information for a single read. Each alignment line has 11 mandatory fields for essential mapping information and a variable number of other fields for aligner specific information. An example entry from a SAM file is displayed below with the different fields highlighted.
 
-Now, we will use a library called SAMtools to convert our SAM file to a BAM file. 
+We're going to switch over to using sambamba 
 
 ```unix
-module load samtools
+wget https://github.com/biod/sambamba/releases/download/v0.6.6/sambamba_v0.6.6_linux.tar.bz2
+tar xvf sambamba_v0.6.6_linux.tar.bz2
 ```
 
 Make a copy of the bwa_map script we ran Tuesday. Rename the run and the output file. Delete the script. We  will put several lines into the script. This next bit is slightly choose your own adventure.
@@ -44,7 +45,7 @@ Both of these will take about an hour.
 Then we sort and index them. Add the below to your script. Double check paths to files:
 
 ```
-samtools sort -@ 20 -m 3.2 mega.bam -o mega.sorted.bam
+/work/amwright/sambamba_v0.6.6 sort -o sorted.bam -p -t 20 mega.bam
 samtools index -@ 20 mega.sorted.bam
 ```
 
@@ -69,7 +70,7 @@ The pileups are also used to find small indels. For instance, if the input genom
 Create another script file by copying either the bwa\_map script or sam\_command script. Rename the run and the output. Delete the actual commands. Replace them with:
 
 ```
-  java -jar /work/yourUseName/pilon-1.21.jar --genome data/assembled/Illumina_assembly.fasta --outdir data/  --changes --tracks --diploid --frags data/mega.sorted.bam > illumina-pilon.log
+  java -Xmx120G -jar /work/yourUseName/pilon-1.21.jar --genome data/assembled/Illumina_assembly.fasta --outdir data/  --changes --tracks --diploid --frags data/mega.sorted.bam > illumina-pilon.log
 ```
 
 ### Homework 
