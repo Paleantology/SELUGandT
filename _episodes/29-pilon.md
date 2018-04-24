@@ -79,6 +79,8 @@ Create another script file by copying either the bwa\_map script or sam\_command
 
 Choose one other factor that you think might affect the assembly. Use pilon to make improvements to that issue. For example, you might consider eliminating low quality bases. Alternatively, you might choose to eliminate something from the fix list.
 
+Make either a separate script, or add you pilon command to the qsub we started in class. Push to your copy of the course website, or email to me.
+
 ## References
 
 [Pilon](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0112963#s5) 
