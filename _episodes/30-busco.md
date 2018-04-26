@@ -53,6 +53,10 @@ Untar it.
 Lastly, there are a couple dependencies for BUSCO:
 
 ```
+
+wget http://eddylab.org/software/hmmer3/3.1b2/hmmer-3.1b2-linux-intel-x86_64.tar.gz
+tar xvf hmmer-3.1b2-linux-intel-x86_64.tar.gz
+
 wget http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz
 tar xvf zlib_1.2.8.dfsg.orig.tar.gz 
 cd  zlib-1.2.8/
