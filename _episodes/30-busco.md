@@ -82,4 +82,7 @@ Next, transfer back into the clownfish_data directory. Copy one of your run scri
 
 In qsub: export AUGUSTUS_CONFIG_PATH=/my_path_to_AUGUSTUS/augustus/config/)
 
+## Homework
+
+Complete BUSCO analyses on both of your Pilon-improved genome assemblies. Add and commit the short\_summary\_busco\_annotation.txt for each of these analyses to your fork of the course github.
 
